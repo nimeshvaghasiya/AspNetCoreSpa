@@ -48,7 +48,8 @@
     4.2. npm start
 5. Run .Net project:
     F5 from either [Visual Studio IDE](https://www.visualstudio.com/) OR [VScode] (https://code.visualstudio.com/):
-
+    Note: If you are running using Visual Studio Code, install dev certificates using command:
+    dotnet dev-certs https --trust
 6. Target either Sqlite or Microsoft SQL Server
     
 This project supports both databases OOTB.
@@ -62,7 +63,9 @@ This project supports both databases OOTB.
     * This will use `SqlServerConnectionString` connection string pointing to default instance of SQL server installed on local machine
 
 7. Identity server for authentication:
-    This project by default uses a hosted version of Identity Server at this url: (https://aspnetcorests.azurewebsites.net/).
+    a. Open terminal
+    b. cd AspNetCoreSpa.STS
+    c. dotnet run
 
 	2 Test users:
 	Username: admin@admin.com
@@ -70,10 +73,8 @@ This project supports both databases OOTB.
 	OR
 	Username: user@user.com
 	Password: P@ssw0rd!
-    
-    Alternatively, you can run local version of identity server:
-    a. Run `AspNetCoreSpa.STS` project from this solution
-    b. Change  `StsAuthority` configuration in `appsettings.Development.json` or `appsettings.json` file inside `src/AspNetCoreSpa.Web` to the local running Identity Server URL.
+
+    Note: For production use Identity server hosted with appropriate configuration.    
 ```
 
 ## Other commands
